@@ -2,7 +2,7 @@ public class Principal {
     public static void main(String[] args){
 
         /*
-        System.out.println(">>>>CABECERAS VERTICALES");
+        System.out.println(">>>>LISTAS VERTICALES");
         ListaVertical listaV = new ListaVertical();
         listaV.insertar(new NodoOrtogonal(5,0,6));
         listaV.insertar(new NodoOrtogonal(3,0,3));
@@ -13,7 +13,7 @@ public class Principal {
 
         listaV.recorrer();
 
-        System.out.println(">>>>CABECERAS HORIZONTALES");
+        System.out.println(">>>>LISTAS HORIZONTALES");
         ListaHorizontal listaH = new ListaHorizontal();
         listaH.insertar(new NodoOrtogonal(5,2,2));
         listaH.insertar(new NodoOrtogonal(3,1,3));
@@ -24,7 +24,7 @@ public class Principal {
 
         listaH.recorrer();
 
-        System.out.println(">>>>CABECERAS HORIZONTALES");
+        System.out.println(">>>>CABECERAS COLUMNAS");
         ListaCabeceraColumnas listaCH = new ListaCabeceraColumnas();
         listaCH.insertar(new NodoCabeceraColumna(6));
         listaCH.insertar(new NodoCabeceraColumna(3));
@@ -35,7 +35,7 @@ public class Principal {
         listaCH.recorrer();
         System.out.println((listaCH.busqueda(6) != null) ? "> Si existe la cabecera" : "> No existe la cabecera");
 
-        System.out.println(">>>>CABECERAS VERTICALES");
+        System.out.println(">>>>CABECERAS FILAS");
         ListaCabeceraFilas listaCV = new ListaCabeceraFilas();
         listaCV.insertar(new NodoCabeceraFila(6));
         listaCV.insertar(new NodoCabeceraFila(3));
@@ -46,11 +46,12 @@ public class Principal {
         listaCV.recorrer();
         System.out.println((listaCV.busqueda(7) != null) ? "> Si existe la cabecera" : "> No existe la cabecera");*/
 
+        System.out.println(">>>>MATRIZ ORTOGONAL<<<<");
         MatrizOrtogonal matriz = new MatrizOrtogonal();
         matriz.llenar(3,3);
 
-        System.out.println("buscando por filas: " + matriz.filas.busqueda(1).fila.primero.getAbajo().getDerecha().getDato());
-        System.out.println("buscando por columnas: " + matriz.columnas.busqueda(2).columna.primero.getAbajo().getIzquierda().getIzquierda().getDato());
+        System.out.println("> buscando por filas: " + matriz.filas.busqueda(1).fila.primero.getAbajo().getDerecha().getDato());
+        System.out.println("> buscando por columnas: " + matriz.columnas.busqueda(2).columna.primero.getAbajo().getIzquierda().getIzquierda().getDato());
 
 
     }
